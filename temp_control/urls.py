@@ -1,9 +1,11 @@
 from django.urls import path
 from temp_control import views
+from django.views.generic import RedirectView
 
 app_name = 'temp_control'
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/temp-control/')),
     # views for template
     path('temp-control/', views.index, name='room_info'),
     path('temp-control/cooler/toggle/',views.cooler_toggle ,name="cooler_toggle"),
