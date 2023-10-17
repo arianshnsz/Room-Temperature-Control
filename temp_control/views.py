@@ -18,7 +18,7 @@ def index(request):
         'temperature': temperature,
         'room': room
     }
-    return render(request, 'temperature_control/index.html', context)
+    return render(request, 'temp_control/index.html', context)
 
 
 def cooler_toggle(request):
